@@ -5,14 +5,16 @@ metadata: # kpt-merge: envoy/envoy
   namespace: envoy
   annotations:
     internal.kpt.dev/upstream-identifier: 'apps|Deployment|envoy|envoy'
+  labels:
+    app: CJ-2
 spec:
   selector:
     matchLabels:
-      app: envoy
+      app: CJ-2
   template:
     metadata:
       labels:
-        app: envoy
+        app: CJ-2
     spec:
       containers:
       - name: envoy

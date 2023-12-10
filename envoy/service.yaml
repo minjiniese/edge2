@@ -5,9 +5,11 @@ metadata: # kpt-merge: envoy/envoy
   namespace: envoy
   annotations:
     internal.kpt.dev/upstream-identifier: '|Service|envoy|envoy'
+  labels:
+    app: CJ-2
 spec:
   selector:
-    app: envoy
+    app: CJ-2
   ports:
   - port: 80
     targetPort: 10000
