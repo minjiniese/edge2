@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: # kpt-merge: envoy/envoy
+  name: envoy
+  namespace: envoy
+  annotations:
+    internal.kpt.dev/upstream-identifier: '|Service|envoy|envoy'
+  labels:
+    app: CJ-2
+spec:
+  selector:
+    app: CJ-2
+  ports:
+  - port: 80
+    targetPort: 10000
